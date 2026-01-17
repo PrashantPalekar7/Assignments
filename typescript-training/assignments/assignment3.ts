@@ -1,22 +1,14 @@
 //A bank evaluates loan applicants on following criteria
 
-let creditscore: number=650;
-let yourIncome: number=50000;
-let isCurrentlyEmployed: boolean=true;
-let debtToIncomeRatio: number= 40;
-
+function loanEligibility(creditscore: number, yourIncome: number, isCurrentlyEmployed: boolean,
+ debtToIncomeRatio: number): void {
 if(creditscore>=750){
     console.log('Your Loan application is Approved');
 }
 else if(creditscore>=650 && creditscore<750){
-    console.log("Hello, Since your credit score is less than 750, we need to check additional conditions");
-    if(yourIncome>50000){
-        console.log("Your income is greater than 50,000$ hence your application has been approved");
-    }
-    else if(yourIncome==50000){
+     if(yourIncome>=50000){
         if(isCurrentlyEmployed==true){
-            console.log("Great. you are Employed & Your income is 50,000$. Let me check your debtToIncomeRatio.");
-            
+                        
             if(debtToIncomeRatio<40){
                 console.log("Your Loan is approved");
             }
@@ -37,3 +29,6 @@ else if(creditscore>=650 && creditscore<750){
 else if(creditscore<650){
     console.log("Your credit score is less than 650. hence your loan application is denied.");
 }
+}
+
+loanEligibility(650,50000,true,39);
