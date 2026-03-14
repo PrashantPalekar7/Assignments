@@ -23,7 +23,7 @@ console.log(c);
 //let b=123;  //Cannot redeclare block-scoped variable 'b'.
 var c=1234; //'var' allows Re-declaration
 console.log(c);
-
+//did some changes
 //4. scope
 {
     const x=2222;
